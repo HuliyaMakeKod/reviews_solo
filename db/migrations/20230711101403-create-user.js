@@ -20,9 +20,6 @@ module.exports = {
       password: {
         type: Sequelize.STRING,
       },
-      city: {
-        type: Sequelize.STRING,
-      },
       country: {
         type: Sequelize.STRING,
       },

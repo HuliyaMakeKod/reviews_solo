@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
     user_id: DataTypes.INTEGER,
   }, {
     sequelize,
-    modelName: 'Riview',
+    modelName: 'Review',
   });
   return Review;
 };
