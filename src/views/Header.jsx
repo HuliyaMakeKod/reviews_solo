@@ -1,6 +1,6 @@
 const React = require('react');
 
-function Navbar() {
+function Navbar({ login }) {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
@@ -10,9 +10,29 @@ function Navbar() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
-            <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">Мои объявления</a>
-            </li>
+            {login ? (
+              <>
+
+                <li className="nav-item">
+                  <a className="nav-link active" aria-current="page" href="#">Новый отзыв</a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link active" aria-current="page" href="#">Профиль</a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link active" aria-current="page" href="#">Выйти</a>
+                </li>
+              </>
+            ) : (
+              <>
+                <li className="nav-item" style={{ visibility: login ? 'hidden' : 'visible' }}>
+                  <a className="nav-link active" aria-current="page" href="/registr">Зарегистрироваться</a>
+                </li>
+                <li className="nav-item" style={{ visibility: login ? 'hidden' : 'visible' }}>
+                  <a className="nav-link active" aria-current="page" href="/login">Войти</a>
+                </li>
+              </>
+            )}
           </ul>
         </div>
       </div>

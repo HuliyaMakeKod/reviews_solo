@@ -8,7 +8,7 @@ const Main = require('../views/Main');
 const { Review } = require('../../db/models');
 
 router.get('/', (req, res) => {
-  renderTemplate(Main, nall, res);
+  renderTemplate(Main, null, res);
 });
 
 module.exports = router;

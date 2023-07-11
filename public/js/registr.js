@@ -35,9 +35,9 @@ regForm.addEventListener('submit', async (e) => {
       successMessage.textContent = result.msg;
       successMessage.classList.add('success-message');
       regForm.appendChild(successMessage);
-    //   setTimeout(() => {
-    //     window.location.href = '/main';
-    //   }, 2000);
+      setTimeout(() => {
+        window.location.href = '/main';
+      }, 1000);
     }
   }
 });

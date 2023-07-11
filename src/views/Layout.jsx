@@ -1,7 +1,7 @@
 const React = require('react');
 const Navbar = require('./Header');
 
-module.exports = function Layout({ children }) {
+module.exports = function Layout({ children, login }) {
   return (
     <html lang="en">
       <head>
