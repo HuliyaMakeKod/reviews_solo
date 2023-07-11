@@ -11,7 +11,8 @@ const FileStore = require('session-file-store')(session);
 const startRouter = require('./src/routes/index');
 const registrRouter = require('./src/routes/registr');
 const loginRouter = require('./src/routes/login');
-const mainRouter = require('./src/routes/main')
+const mainRouter = require('./src/routes/main');
+const profileRouter = require('./src/routes/profile');
 const { secureRoute } = require('./src/lib/middleweres/common');
 
 const app = express();
@@ -51,6 +52,7 @@ app.use('/', startRouter);
 app.use('/registr', registrRouter);
 app.use('/login', loginRouter);
 app.use('/main', mainRouter);
+app.use('/profile', profileRouter);
 
 app.listen(PORT, () => {
   console.log(`server started PORT: ${PORT}`);
