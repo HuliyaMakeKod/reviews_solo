@@ -17,7 +17,7 @@ module.exports = function Layout({ children, login }) {
         <title>Reviews</title>
       </head>
       <body>
-        <Navbar />
+        <Navbar login={login} />
         {children}
       </body>
     </html>

@@ -12,7 +12,6 @@ function Navbar({ login }) {
           <ul className="navbar-nav">
             {login ? (
               <>
-
                 <li className="nav-item">
                   <a className="nav-link active" aria-current="page" href="#">Новый отзыв</a>
                 </li>
@@ -25,10 +24,10 @@ function Navbar({ login }) {
               </>
             ) : (
               <>
-                <li className="nav-item" style={{ visibility: login ? 'hidden' : 'visible' }}>
+                <li className="nav-item">
                   <a className="nav-link active" aria-current="page" href="/registr">Зарегистрироваться</a>
                 </li>
-                <li className="nav-item" style={{ visibility: login ? 'hidden' : 'visible' }}>
+                <li className="nav-item">
                   <a className="nav-link active" aria-current="page" href="/login">Войти</a>
                 </li>
               </>

@@ -2,9 +2,9 @@ const React = require('react');
 
 const Layout = require('./Layout');
 
-module.exports = function Main() {
+module.exports = function Main({login}) {
   return (
-    <Layout>
+    <Layout login={login}>
       <head>
         <script src="/docs/5.3/assets/js/color-modes.js" />
 
