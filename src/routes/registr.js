@@ -38,6 +38,8 @@ router.post('/', async (req, res) => {
       country,
     });
     req.session.login = newUser.login;
+    req.session.name = newUser.name;
+    req.session.email = newUser.email;
     req.session.save(() => {
       res.status(200).json({ msg: 'Пользователь зарегистрирован' });
     });

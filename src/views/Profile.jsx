@@ -2,14 +2,16 @@ const React = require('react');
 
 const Layout = require('./Layout');
 
-module.exports = function Profile({ login }) {
+module.exports = function Profile({ name, login, email }) {
   return (
     <Layout>
+          <link rel="stylesheet" href="/stylesheets/profile.css" />
       <div className="profile">
         <div className="profile-header">
-          <img src="Oтверженные.jpeg" alt="User Photo" className="user-photo" />
-          <h1 className="user-name">John Doe</h1>
-          <p className="user-email">john.doe@example.com</p>
+          <img src="/pic/book.jpeg" alt="User Photo" className="user-photo" />
+          <h1 className="user-name">{login}</h1>
+          <p className="user-name">{name}</p>
+          <p className="user-email">{email}</p>
         </div>
         <div className="profile-posts">
           <h2 className="section-title">My Posts</h2>
@@ -20,7 +22,7 @@ module.exports = function Profile({ login }) {
           </ul>
         </div>
         <div className="profile-controls">
-          <button className="btn btn-change-photo">Change Photo</button>
+          <button className="btn btn-change-photo">Изменить информацию о себе</button>
         </div>
       </div>
     </Layout>

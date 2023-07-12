@@ -2,13 +2,13 @@ const React = require('react');
 
 const Layout = require('./Layout');
 
-module.exports = function Main({login}) {
+module.exports = function Main({ login }) {
   return (
     <Layout login={login}>
       <head>
         <script src="/docs/5.3/assets/js/color-modes.js" />
 
-        <meta charset="utf-8" />
+        <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="" />
         <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors" />
@@ -18,6 +18,78 @@ module.exports = function Main({login}) {
         <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/blog/" />
 
         <link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossOrigin="anonymous" />
+        {/* <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+            }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+                }}
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+    </style> */}
 
         <link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180" />
         <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png" />
@@ -32,7 +104,7 @@ module.exports = function Main({login}) {
         <link href="blog.css" rel="stylesheet" />
       </head>
       <body>
-        <svg xmlns="http://www.w3.org/2000/svg" style={{display: 'none'}}>
+        <svg xmlns="http://www.w3.org/2000/svg" style={{ display: 'none' }}>
           <symbol id="check2" viewBox="0 0 16 16">
             <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
           </symbol>
@@ -85,7 +157,7 @@ module.exports = function Main({login}) {
           </ul>
         </div>
 
-        <svg xmlns="http://www.w3.org/2000/svg" style={{display: 'none'}}>
+        <svg xmlns="http://www.w3.org/2000/svg" style={{ display: 'none' }}>
           <symbol id="aperture" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24">
             <circle cx="12" cy="12" r="10" />
             <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94" />
@@ -135,7 +207,7 @@ module.exports = function Main({login}) {
                 <div className="col-auto d-none d-lg-block">
                   <svg className="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <title>Placeholder</title>
-                    <rect style={{backgroundImage: 'url("/pic/Отверженные.jpeg")'}} width="100%" height="100%" fill="#55595c" />
+                    <rect style={{ backgroundImage: 'url("/pic/book.jpeg")' }} width="100%" height="100%" fill="#55595c" />
                     <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
                   </svg>
                 </div>
@@ -381,7 +453,7 @@ module.exports = function Main({login}) {
             </div>
 
             <div className="col-md-4">
-              <div className="position-sticky" style={{top: '2rem'}}>
+              <div className="position-sticky" style={{ top: '2rem' }}>
                 <div className="p-4 mb-3 bg-body-tertiary rounded">
                   <h4 className="fst-italic">About</h4>
                   <p className="mb-0">Customize this section to tell your visitors a little bit about your publication, writers, content, or something else entirely. Totally up to you.</p>
@@ -392,30 +464,30 @@ module.exports = function Main({login}) {
                   <ul className="list-unstyled">
                     <li>
                       <a className="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
-                          <svg className="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777" /></svg>
-                          <div className="col-lg-8">
-                              <h6 className="mb-0">Example blog post title</h6>
-                              <small className="text-body-secondary">January 15, 2023</small>
-                            </div>
-                        </a>
+                        <svg className="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777" /></svg>
+                        <div className="col-lg-8">
+                          <h6 className="mb-0">Example blog post title</h6>
+                          <small className="text-body-secondary">January 15, 2023</small>
+                        </div>
+                      </a>
                     </li>
                     <li>
                       <a className="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
-                          <svg className="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777" /></svg>
-                          <div className="col-lg-8">
-                              <h6 className="mb-0">This is another blog post title</h6>
-                              <small className="text-body-secondary">January 14, 2023</small>
-                            </div>
-                        </a>
+                        <svg className="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777" /></svg>
+                        <div className="col-lg-8">
+                          <h6 className="mb-0">This is another blog post title</h6>
+                          <small className="text-body-secondary">January 14, 2023</small>
+                        </div>
+                      </a>
                     </li>
                     <li>
                       <a className="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
-                          <svg className="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777" /></svg>
-                          <div className="col-lg-8">
-                              <h6 className="mb-0">Longer blog post title: This one has multiple lines!</h6>
-                              <small className="text-body-secondary">January 13, 2023</small>
-                            </div>
-                        </a>
+                        <svg className="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777" /></svg>
+                        <div className="col-lg-8">
+                          <h6 className="mb-0">Longer blog post title: This one has multiple lines!</h6>
+                          <small className="text-body-secondary">January 13, 2023</small>
+                        </div>
+                      </a>
                     </li>
                   </ul>
                 </div>

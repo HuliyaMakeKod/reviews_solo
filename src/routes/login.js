@@ -20,6 +20,9 @@ router.post('/', async (req, res) => {
       const checkPass = await bcrypt.compare(password, user.password);
       if (checkPass) {
         req.session.login = login;
+        req.session.name = user.name;
+        req.session.email = user.email;
+        console.log(req.session.email);
         res.redirect('/main');
       } else {
         res.json({ err: 'Пароль неверный' });

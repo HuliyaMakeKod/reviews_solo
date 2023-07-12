@@ -9,8 +9,8 @@ const { User } = require('../../db/models');
 const { Review } = require('../../db/models');
 
 router.get('/', (req, res) => {
-  const { login } = req.session;
-  renderTemplate(Profile, { login }, res);
+  const { name, login, email } = req.session;
+  renderTemplate(Profile, { name, login, email }, res);
 });
 
 module.exports = router;

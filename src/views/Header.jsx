@@ -19,7 +19,7 @@ function Navbar({ login }) {
                   <a className="nav-link active" aria-current="page" href="/profile">Профиль</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="#">Выйти</a>
+                  <a className="nav-link active" aria-current="page" href="/logout">Выйти</a>
                 </li>
               </>
             ) : (
