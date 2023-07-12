@@ -8,9 +8,15 @@ const Profile = require('../views/Profile');
 const { User } = require('../../db/models');
 const { Review } = require('../../db/models');
 
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
   const { name, login, email } = req.session;
-  renderTemplate(Profile, { name, login, email }, res);
+  const user = await User.findOne({ where: { login } });
+  const userId = user.id;
+  const reviews = await Review.findAll({ where: { user_id: userId } });
+  console.log(reviews);
+  renderTemplate(Profile, {
+    name, login, email, reviews,
+  }, res);
 });
 
 module.exports = router;

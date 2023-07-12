@@ -14,6 +14,7 @@ const loginRouter = require('./src/routes/login');
 const mainRouter = require('./src/routes/main');
 const profileRouter = require('./src/routes/profile');
 const logoutRouter = require('./src/routes/logout');
+const newReviewRouter = require('./src/routes/newReview');
 const { secureRoute } = require('./src/lib/middleweres/common');
 
 const app = express();
@@ -54,7 +55,8 @@ app.use('/registr', registrRouter);
 app.use('/login', loginRouter);
 app.use('/main', mainRouter);
 app.use('/profile', profileRouter);
-app.use('/logout', logoutRouter)
+app.use('/logout', logoutRouter);
+app.use('/newReview', newReviewRouter);
 
 app.listen(PORT, () => {
   console.log(`server started PORT: ${PORT}`);

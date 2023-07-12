@@ -1,0 +1,147 @@
+body {
+    height: 100%;
+  }
+  
+  h1 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+  }
+  
+  header {
+    overflow: auto;
+    padding-bottom: 1em;
+  }
+  
+  footer {
+    padding: 2em 0;
+    position: absolute;
+    bottom: 0;
+  }
+  
+  main {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3em;
+    width: 40%;
+  }
+  
+  
+  .container {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1em 5em;
+    background:rgba(0, 0, 0, 0.6);
+  }
+  
+  .title {
+    font-size: 2em;
+    font-style: italic;
+    line-height: 1.75em
+  }
+  
+    a.title {
+      color: white;
+      text-decoration: none;
+    }
+  
+  .signup {
+    float: right;
+  }
+  
+  .button {
+    background-color: #005a83;
+    border-radius: .5em;
+    padding: 1em;
+    color: white;
+    text-decoration: none;
+  }
+
+  .entries {
+    padding: 0;
+    list-style-type: none;
+    border: 1px solid #c8c8c8;
+    border-radius: .5em;
+  }
+  
+  .entry {
+    padding: 1em 0 2em 0;
+    text-align: center;
+    border-bottom: 1px solid #c8c8c8;
+  }
+  
+    .entry:last-of-type {
+      border-bottom: none;
+    }
+  
+  .singer {
+    display: block;
+    font-size: 2em;
+    margin-bottom: .25em;
+    color: #5a5a5a;
+  }
+  
+  .song-title {
+    display: block;
+    font-style: italic;
+    color: #828c91;
+  }
+  
+  .entry-links {
+    margin-top: 1em;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .entry-link {
+    display: inline;
+    font-size: .8em;
+    margin: 0 .5em;
+  }
+  
+  .legal {
+    color: #828c91;
+    font-style: italic;
+  }
+  
+  .form-wrapper, .content-wrapper {
+    border-radius: .5em;
+    padding: 2em;
+    color: #5a5a5a;
+  }
+  
+  label {
+    display: block;
+    padding-bottom: .5em;
+  }
+  
+  input {
+    width: 100%;
+    margin-bottom: 1em;
+    border-radius: .25em;
+    padding: .25em;
+    outline: none;
+    border: 1px solid #828c91;
+  }
+  
+    input[type=submit] {
+      margin-top: 1em;
+      padding: 1.5em;
+      border: none;
+    }
+  
+    input:focus {
+      border-color: #10abb5;
+    }
+  
+  .errors-wrapper {
+    color: #29366c;
+    margin-bottom: 2em;
+  }
+  
+  .errors {
+    margin: 0;
+  }
+  

@@ -8,7 +8,8 @@ const { checkUser } = require('../lib/middleweres/common');
 
 const { Review } = require('../../db/models');
 
-router.get('/', checkUser, (req, res) => {
+router.get('/', checkUser, async (req, res) => {
+  const reviews = await Review.findAll();
   const { login } = req.session;
   renderTemplate(Main, { login }, res);
 });

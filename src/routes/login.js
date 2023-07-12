@@ -22,7 +22,6 @@ router.post('/', async (req, res) => {
         req.session.login = login;
         req.session.name = user.name;
         req.session.email = user.email;
-        console.log(req.session.email);
         res.redirect('/main');
       } else {
         res.json({ err: 'Пароль неверный' });

@@ -23,6 +23,9 @@ module.exports = {
       pic: {
         type: Sequelize.STRING,
       },
+      text: {
+        type: Sequelize.STRING,
+      },
       user_id: {
         type: Sequelize.INTEGER,
         references: {
