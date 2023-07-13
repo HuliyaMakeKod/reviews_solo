@@ -20,7 +20,7 @@ module.exports = function Main({ login, reviews }) {
             <li className="singer">{review.title}</li>
             <li className="song-title">{review.description}</li>
             <ul className="entry-links">
-              <li className="entry-link"><a className="oneCard" href={`show-one-entry/${review.id}`}>details</a></li>
+              <li className="entry-link"><a className="oneCard" href={`main/show_review/${review.id}`}>Подробнее</a></li>
             </ul>
           </li>
           </div>
