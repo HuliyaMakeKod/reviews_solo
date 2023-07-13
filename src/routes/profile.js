@@ -30,14 +30,19 @@ router.delete('/delete_review/:id', async (req, res) => {
   }
 });
 
-router.put('/change_review_form/:id', async (req, res) => {
+router.get('/change_review_form/:id', async (req, res) => {
   await Review.findOne({ where: { id: req.params.id } });
   const review = await Review.findOne({ where: { id: req.params.id } });
-  const { title, tematic, description, type, pic, text } = review;
-  console.log(title);
-  renderTemplate(ChengeReview, null, res);
+  const {
+    title, tematic, description, type, pic, text,
+  } = review;
+  renderTemplate(ChengeReview, {
+    title, tematic, description, type, pic, text,
+  }, res);
 });
 
+// router.put('/done_change_review_form/:id', async (req.res) => {
 
+// })
 
 module.exports = router;

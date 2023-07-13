@@ -15,4 +15,8 @@ reviews.addEventListener('click', async (e) => {
       reviews.firstElementChild.cssText = 'display: block';
     }
   }
+  if (e.target.classList.contains('edit')) {
+    const data = e.target.parentNode.parentNode.parentNode;
+    window.location.href = `/profile/change_review_form/${data.id}`;
+  }
 });
