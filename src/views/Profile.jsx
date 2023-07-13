@@ -2,29 +2,49 @@ const React = require('react');
 
 const Layout = require('./Layout');
 
-module.exports = function Profile({ name, login, email, reviews}) {
+module.exports = function Profile({
+  name, login, email, reviews,
+}) {
   return (
     <Layout login={login}>
-          <link rel="stylesheet" href="/stylesheets/profile.css" />
-      <div className="profile">
+      <script defer src="/js/delete.js" />
+      <link rel="stylesheet" href="/stylesheets/profile.css" />
+      <div className="profile" id="profile">
         <div className="profile-header">
           <img src="/pic/book.jpeg" alt="User Photo" className="user-photo" />
-          <h1 className="user-name">Логин: {login}</h1>
-          <p className="user-name">Имя: {name}</p>
-          <p className="user-email">Почта: {email}</p>
+          <h1 className="user-name">
+            Логин:
+            {' '}
+            {login}
+          </h1>
+          <p className="user-name">
+            Имя:
+            {' '}
+            {name}
+          </p>
+          <p className="user-email">
+            Почта:
+            {' '}
+            {email}
+          </p>
         </div>
         <div className="profile-posts">
           <h2 className="section-title">Мои отзывы:</h2>
           {reviews.map((rev) => (
-            <li className="reviews" key={rev.id} id={rev.id}>
-              <span className="title">{rev.title}</span>
-              <span className="type">{rev.type}</span>
-          <ul className="posts-list">
-          <li className="entry-link"><a className="oneCard" href={`show-one-entry/${rev.id}`}>Перейти к отзыву</a></li>
-                <li className="entry-link"><a className="edit" href={`edit-one-entry-form/${rev.id}`}>Редактировать</a></li>
-                <li className="entry-link"><a className="delete" href={`none-entry/${rev.id}`}>Удалить</a></li>
-          </ul>
-          </li>
+            <div className="your_reviews" key={rev.id} id={rev.id}>
+              <li className="reviews">
+                <li className="title">{rev.title}</li>
+                <li className="type">
+                  {rev.type}
+                  {' '}
+                </li>
+                <ul className="posts-list">
+                  <li className="entry-link"><a className="oneCard" href={`show_one_review/${rev.id}`}>Перейти к отзыву</a></li>
+                  <li className="entry-link"><a className="edit" href={`profile/change_review_form/${rev.id}`}>Редактировать</a></li>
+                  <li className="entry-link"><a className="delete" href={`delete_review/${rev.id}`}>Удалить</a></li>
+                </ul>
+              </li>
+            </div>
           ))}
         </div>
         <div className="profile-controls">

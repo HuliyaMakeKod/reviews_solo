@@ -15,7 +15,6 @@ const mainRouter = require('./src/routes/main');
 const profileRouter = require('./src/routes/profile');
 const logoutRouter = require('./src/routes/logout');
 const newReviewRouter = require('./src/routes/newReview');
-const { secureRoute } = require('./src/lib/middleweres/common');
 
 const app = express();
 const { PORT } = process.env;
@@ -49,7 +48,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(session(sessionConfig));
 
 // app.use(secureRoute)
-
 app.use('/', startRouter);
 app.use('/registr', registrRouter);
 app.use('/login', loginRouter);

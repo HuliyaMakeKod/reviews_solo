@@ -45,6 +45,13 @@
   .profile-controls {
     margin-top: 20px;
   }
+
+  .your_reviews {
+    border: 1px solid #1e5981;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 600px;
+  }
   
   .btn {
     padding: 10px 20px;

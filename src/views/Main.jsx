@@ -2,7 +2,7 @@ const React = require('react');
 
 const Layout = require('./Layout');
 
-module.exports = function Main({ reviews, login }) {
+module.exports = function Main({ login, reviews }) {
   return (
     <Layout login={login}>
       <link rel="stylesheet" href="/stylesheets/main.css" />
@@ -13,17 +13,19 @@ module.exports = function Main({ reviews, login }) {
           <a className="nav-item nav-link link-body-emphasis" href="#">Книги</a>
         </nav>
       </div>
-      {/* <ul id="entries" className="entries">
-        {reviews.map((reviews) => (
-          <li className="entry" key={reviews.id} id={reviews.id}>
-            <span className="singer">{reviews.title}</span>
-            <span className="song-title">{reviews.description}</span>
+      <ul id="entries" className="entries">
+        {reviews.map((review) => (
+          <div>
+          <li className="entry" key={review.id} id={review.id}>
+            <li className="singer">{review.title}</li>
+            <li className="song-title">{review.description}</li>
             <ul className="entry-links">
-              <li className="entry-link"><a className="oneCard" href={`show-one-entry/${reviews.id}`}>details</a></li>
+              <li className="entry-link"><a className="oneCard" href={`show-one-entry/${review.id}`}>details</a></li>
             </ul>
           </li>
+          </div>
         ))}
-      </ul> */}
+      </ul>
     </Layout>
   );
 };

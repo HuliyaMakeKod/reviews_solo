@@ -4,14 +4,13 @@ const router = express.Router();
 
 const renderTemplate = require('../lib/renderTemplate');
 const Main = require('../views/Main');
-const { checkUser } = require('../lib/middleweres/common');
 
 const { Review } = require('../../db/models');
 
-router.get('/', checkUser, async (req, res) => {
+router.get('/', async (req, res) => {
   const reviews = await Review.findAll();
   const { login } = req.session;
-  renderTemplate(Main, { login }, res);
+  renderTemplate(Main, { login, reviews }, res);
 });
 
 module.exports = router;
