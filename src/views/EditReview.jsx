@@ -27,7 +27,7 @@ module.exports = function ChangeReview({
           <input id="type_input" name="change_type" type="text" value={review.type} />
 
           <label htmlFor="pic_input">Фото:</label>
-          <input id="pic_input" name="change_pic" type="text" value={review.pic} />
+          <input id="pic_input" type="file" name="pic" value="Прикрепите фото" />
 
           <label htmlFor="text_input">*Текст отзыва:</label>
           <input id="text_input" name="change_text" type="text" value={review.text} />

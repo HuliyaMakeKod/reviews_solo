@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
 
 router.get('/show_review/:id', async (req, res) => {
   const review = await Review.findOne({ where: { id: req.params.id } });
-  renderTemplate(ShowReview, {review}, res);
+  renderTemplate(ShowReview, { review }, res);
 });
 
 module.exports = router;

@@ -2,7 +2,7 @@ const React = require('react');
 
 const Layout = require('./Layout');
 
-module.exports = function Main({ login, reviews }) {
+module.exports = function Beuty({ login, reviews }) {
   return (
     <Layout login={login}>
       <link rel="stylesheet" href="/stylesheets/main.css" />
@@ -16,13 +16,13 @@ module.exports = function Main({ login, reviews }) {
       <ul id="entries" className="entries">
         {reviews.map((review) => (
           <div>
-            <li className="entry" key={review.id} id={review.id}>
-              <li className="singer">{review.title}</li>
-              <li className="song-title">{review.description}</li>
-              <ul className="entry-links">
-                <li className="entry-link"><a className="oneCard" href={`main/show_review/${review.id}`}>Подробнее</a></li>
-              </ul>
-            </li>
+          <li className="entry" key={review.id} id={review.id}>
+            <li className="singer">{review.title}</li>
+            <li className="song-title">{review.description}</li>
+            <ul className="entry-links">
+              <li className="entry-link"><a className="oneCard" href={`main/show_review/${review.id}`}>Подробнее</a></li>
+            </ul>
+          </li>
           </div>
         ))}
       </ul>

@@ -15,6 +15,9 @@ const mainRouter = require('./src/routes/main');
 const profileRouter = require('./src/routes/profile');
 const logoutRouter = require('./src/routes/logout');
 const newReviewRouter = require('./src/routes/newReview');
+const beutyRouter = require('./src/routes/beuty');
+const cinemaRouter = require('./src/routes/cinema');
+const booksRouter = require('./src/routes/books');
 
 const app = express();
 const { PORT } = process.env;
@@ -47,7 +50,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(session(sessionConfig));
 
-// app.use(secureRoute)
+app.use('/uploads', express.static('uploads'));
 app.use('/', startRouter);
 app.use('/registr', registrRouter);
 app.use('/login', loginRouter);
@@ -55,6 +58,9 @@ app.use('/main', mainRouter);
 app.use('/profile', profileRouter);
 app.use('/logout', logoutRouter);
 app.use('/newReview', newReviewRouter);
+app.use('/beuty', beutyRouter);
+app.use('/cinema', cinemaRouter);
+app.use('/books', booksRouter);
 
 app.listen(PORT, () => {
   console.log(`server started PORT: ${PORT}`);
