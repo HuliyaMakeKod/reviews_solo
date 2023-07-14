@@ -15,10 +15,11 @@ module.exports = function Books({ login, reviews }) {
       </div>
       <ul id="entries" className="entries">
         {reviews.map((review) => (
-          <div>
+          <div className='review'>
           <li className="entry" key={review.id} id={review.id}>
             <li className="singer">{review.title}</li>
             <li className="song-title">{review.description}</li>
+            <li><img style={{ height: '300px'}} className="pic" src={review.pic} alt="" /></li>
             <ul className="entry-links">
               <li className="entry-link"><a className="oneCard" href={`main/show_review/${review.id}`}>Подробнее</a></li>
             </ul>

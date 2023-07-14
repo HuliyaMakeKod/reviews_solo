@@ -44,7 +44,7 @@ module.exports = function Profile({
                   {' '}
                 </li>
                 <ul className="posts-list">
-                  <li className="entry-link"><a className="oneCard" href={`show_review/${rev.id}`}>Перейти к отзыву</a></li>
+                  <li className="entry-link"><a className="oneCard" href={`show_review/${rev.id}`} style={{ displey: 'none' }}>Перейти к отзыву</a></li>
                   <li className="entry-link"><a className="edit" href={`profile/change_review_form/${rev.id}`}>Редактировать</a></li>
                   <li className="entry-link"><a className="delete" href={`delete_review/${rev.id}`}>Удалить</a></li>
                 </ul>

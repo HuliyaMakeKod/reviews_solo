@@ -7,6 +7,7 @@ module.exports = function Registr({ props }) {
     <Layout>
       <div className="form-signin w-100 m-auto">
         <h2>Регистрация</h2>
+        <link rel="stylesheet" href="/stylesheets/registr.css" />
         <script defer src="/js/registr.js" />
         <form action="/registr" method="POST" id="regForm" name="regForm">
           <div className="mb-3">

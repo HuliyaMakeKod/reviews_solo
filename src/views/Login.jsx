@@ -6,7 +6,8 @@ module.exports = function Registr({ props }) {
   return (
     <Layout>
       <form action="/login" method="POST" id="logForm" name="logForm">
-        <div className="form-signin w-100 m-auto">
+        <link rel="stylesheet" href="/stylesheets/registr.css" />
+        <div className="form-signin w-100 m-auto" id="box">
           <h2>Введите данные для входа</h2>
           <form action="/login" method="POST" id="logForm" name="logForm">
             <div className="mb-3">

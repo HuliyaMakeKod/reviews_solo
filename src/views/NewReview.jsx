@@ -11,6 +11,8 @@ module.exports = function NewReview({ login }) {
       <main className="form-wrapper" role="main">
 
         <form method="POST" action="newReview" encType="multipart/form-data" name="newReviewForm">
+
+          <div className='main'>
           <label htmlFor="title_input">*Заголовок:</label>
           <input id="title_input" name="title" type="text" placeholder="Дайте название отзыву" />
 
@@ -31,9 +33,10 @@ module.exports = function NewReview({ login }) {
           <input id="pic_input" type="file" name="pic" />
 
           <label htmlFor="text_input">*Текст отзыва:</label>
-          <input id="text_input" name="text" type="text" placeholder="Поделитесь вашим мнением подробнее" />
+          <textarea style={{ width: '700px' }} id="text_input" name="text" type="text" placeholder="Поделитесь вашим мнением подробнее" />
 
           <button type="submit" className="button">Поделиться мнением</button>
+          </div>
         </form>
       </main>
     </Layout>

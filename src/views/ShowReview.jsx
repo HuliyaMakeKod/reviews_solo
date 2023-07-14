@@ -25,13 +25,12 @@ module.exports = function ShowEntry({ login, review }) {
           </div>
 
           <div className="info-item">
-            <span className="label">Картинка:</span>
             <img className="pic" src={review.pic} alt="" />
           </div>
-
-          <div className="info-item">
-            <span className="label">Текст:</span>
-            <span className="value">{review.text}</span>
+          <div className="text" style={{ width: '70%'}}>
+            <div className="info-item">
+              <span className="value">{review.text}</span>
+            </div>
           </div>
         </div>
       </div>
