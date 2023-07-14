@@ -3,7 +3,7 @@ const React = require('react');
 const Layout = require('./Layout');
 
 module.exports = function Profile({
-  name, login, email, reviews,
+  name, login, email, country, reviews,
 }) {
   return (
     <Layout login={login}>
@@ -27,6 +27,11 @@ module.exports = function Profile({
             {' '}
             {email}
           </p>
+          <p className="user-country">
+            Страна:
+            {' '}
+            {country}
+          </p>
         </div>
         <div className="profile-posts">
           <h2 className="section-title">Мои отзывы:</h2>
@@ -39,7 +44,7 @@ module.exports = function Profile({
                   {' '}
                 </li>
                 <ul className="posts-list">
-                  <li className="entry-link"><a className="oneCard" href={`show_one_review/${rev.id}`}>Перейти к отзыву</a></li>
+                  <li className="entry-link"><a className="oneCard" href={`show_review/${rev.id}`}>Перейти к отзыву</a></li>
                   <li className="entry-link"><a className="edit" href={`profile/change_review_form/${rev.id}`}>Редактировать</a></li>
                   <li className="entry-link"><a className="delete" href={`delete_review/${rev.id}`}>Удалить</a></li>
                 </ul>
@@ -47,9 +52,9 @@ module.exports = function Profile({
             </div>
           ))}
         </div>
-        <div className="profile-controls">
+        {/* <div className="profile-controls">
           <button className="btn btn-change-photo">Изменить информацию о себе</button>
-        </div>
+        </div> */}
       </div>
     </Layout>
   );

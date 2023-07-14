@@ -1,9 +1,9 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-module.exports = function ShowEntry({ review }) {
+module.exports = function ShowEntry({ login, review }) {
   return (
-    <Layout>
+    <Layout login="login">
       <link rel="stylesheet" href="/stylesheets/showReview.css" />
 
       <div className="main">

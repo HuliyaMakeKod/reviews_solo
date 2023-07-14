@@ -12,15 +12,17 @@ const { User } = require('../../db/models');
 const { Review } = require('../../db/models');
 
 router.get('/', checkUser, async (req, res) => {
-  const { name, login, email } = req.session;
+  const {
+    name, login, email,
+  } = req.session;
   const user = await User.findOne({ where: { login } });
   const userId = user.id;
+  const { country } = user;
   const reviews = await Review.findAll({ where: { user_id: userId } });
   renderTemplate(Profile, {
-    name, login, email, reviews,
+    name, login, email, reviews, country,
   }, res);
 });
-
 router.delete('/delete_review/:id', async (req, res) => {
   try {
     await Review.destroy({ where: { id: req.params.id } });

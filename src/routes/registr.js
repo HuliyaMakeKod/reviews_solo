@@ -16,6 +16,7 @@ router.post('/', async (req, res) => {
   const {
     name, login, email, password, country,
   } = req.body;
+  console.log(country);
   try {
     const oldUserEmail = await User.findOne({ where: { email } });
     const oldUserLogin = await User.findOne({ where: { login } });

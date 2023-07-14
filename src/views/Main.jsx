@@ -9,7 +9,7 @@ module.exports = function Main({ login, reviews }) {
       <div className="nav-scroller py-1 mb-3 border-bottom">
         <nav className="nav nav-underline justify-content-between">
           <a className="nav-item nav-link link-body-emphasis active" href="/beuty">Красота и здоровье</a>
-          <a className="nav-item nav-link link-body-emphasis" href="/cinema">Кино и мультфильмы</a>
+          <a className="nav-item nav-link link-body-emphasis" href="/cinema">Кино</a>
           <a className="nav-item nav-link link-body-emphasis" href="/books">Книги</a>
         </nav>
       </div>

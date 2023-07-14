@@ -3,8 +3,6 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 
-// const upload = multer({ dest: 'uploads/' });
-
 const renderTemplate = require('../lib/renderTemplate');
 const NewReview = require('../views/NewReview');
 
@@ -23,7 +21,8 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 router.get('/', (req, res) => {
-  renderTemplate(NewReview, null, res);
+  const { login } = req.session;
+  renderTemplate(NewReview, { login }, res);
 });
 
 router.post('/', upload.single('pic'), async (req, res) => {
@@ -48,8 +47,7 @@ router.post('/', upload.single('pic'), async (req, res) => {
       user_id: userId,
     });
     req.session.save(() => {
-      // res.status(200).json({ msg: 'Отзыв опубликован' });
-      res.redirect('/main')
+      res.redirect('/main');
     });
   } catch (error) {
     res.json({ msg: 'Не удалось добавить отзыв' });

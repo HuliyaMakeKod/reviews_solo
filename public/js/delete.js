@@ -19,4 +19,8 @@ reviews.addEventListener('click', async (e) => {
     const data = e.target.parentNode.parentNode.parentNode;
     window.location.href = `/profile/change_review_form/${data.id}`;
   }
+  if (e.target.classList.contains('oneCard')) {
+    const data = e.target.parentNode.parentNode.parentNode;
+    window.location.href = `/main/show_review/${data.id}`;
+  }
 });

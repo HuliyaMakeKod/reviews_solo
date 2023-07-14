@@ -9,7 +9,7 @@ const { Review } = require('../../db/models');
 
 router.get('/', async (req, res) => {
   const { login } = req.session;
-  const tematic = 'Кино и мультфильмы';
+  const tematic = 'Кино';
   const reviews = await Review.findAll({ where: { tematic } });
   renderTemplate(Cinema, { login, reviews }, res);
 });

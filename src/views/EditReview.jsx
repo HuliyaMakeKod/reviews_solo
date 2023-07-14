@@ -17,8 +17,15 @@ module.exports = function ChangeReview({
           <label htmlFor="title_input">*Заголовок:</label>
           <input id="title_input" name="change_title" type="text" value={review.title} />
 
-          <label htmlFor="tematic_input">*Тематика:</label>
-          <input id="tematic_input" name="change_tematic" type="text" value={review.tematic} />
+          <label htmlFor="fruits">*Тематика:</label>
+          <select id="tematic" name="change_tematic">
+            <option value="Красота и здоровье">Красота и здоровье</option>
+            <option value="Кино">Кино</option>
+            <option value="Книги">Книги</option>
+          </select>
+
+          {/* <label htmlFor="tematic_input">*Тематика:</label>
+          <input id="tematic_input" name="change_tematic" type="text" value={review.tematic} /> */}
 
           <label htmlFor="discription_input">Описание:</label>
           <input id="discription_input" name="change_description" type="text" value={review.description} />
